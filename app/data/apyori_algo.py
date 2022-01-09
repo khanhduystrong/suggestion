@@ -1,12 +1,10 @@
 import numpy as np
 import pandas as pd
-import random
 import os.path
-from apyori import apriori
 
 scriptpath = os.path.dirname(__file__)
-filename = os.path.join(scriptpath, 'Results.csv')
-dataset = pd.read_csv(filename,sep=',')
+filename = os.path.join(scriptpath, 'TeamPY4DS_Apyori.csv')
+dataset = pd.read_csv(filename, sep=',')
 dataset['items_buy']=(dataset['items_base']).str.split()
 uni=[]
 for i in dataset['items_buy']:

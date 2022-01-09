@@ -4,7 +4,7 @@ from app.data.apyori_algo import *
 
 # Create your views here.
 def index(request):
-    dict_products = res.copy()
+    dict_products = uni.copy()
     return render(request, 'index.html', {'dict_products': dict_products})
 
 def suggest(request):
